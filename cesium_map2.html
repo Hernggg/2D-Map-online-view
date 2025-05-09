@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cesium Map with Custom Tiles</title>
+  <script src="https://cdn.jsdelivr.net/npm/cesium@1.114/Build/Cesium/Cesium.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/cesium@1.114/Build/Cesium/Widgets/widgets.css" rel="stylesheet">
+
+  <style>
+    html, body, #cesiumContainer {
+      width: 100%; height: 100%; margin: 0; padding: 0; overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+  <div id="cesiumContainer"></div>
+  <script>
+    // 初始化 Cesium 视图
+    const viewer = new Cesium.Viewer('cesiumContainer', {
+      terrainProvider: Cesium.createWorldTerrain(),
+      baseLayerPicker: false
+    });
+
+    // 加载本地的 TMS 瓦片图层
+    
+
+    // 设置初始视角
+    viewer.camera.flyTo({
+      destination: Cesium.Cartesian3.fromDegrees(100.9861477235, 4.7523317395, 1500)
+    });
+  </script>
+</body>
+</html>
